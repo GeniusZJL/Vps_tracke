@@ -6,12 +6,12 @@ VPS_Tracker工具是一款用Python编写的工具，专为攻防演练而设计
 
 参考知攻善防实验室项目：https://github.com/ChinaRan0/fastbt
 
-#### 0x02支持17个黑客工具的检测规则
+#### 0x02支持17款黑客工具的检测规则
 
 ```
 资产工具：灯塔系统、H资产收集平台、LangSrc、nem
 漏洞扫描工具：AWVS、大宝剑、美杜莎红队武器库平台、Nessus、NextScan
-漏洞工具：DNSLog平台、XSS Platform、xray反连平台
+漏洞利用平台：DNSLog平台、XSS Platform、xray反连平台
 C2工具：Manjusaka、Viper、Supershell
 流量代理工具：NPS、Frp web面板
 ```

@@ -175,9 +175,14 @@ def scan_ports(ip, ports):
 
 
 def scan_all_ports(ip):
-    all_ports = list(range(1, 65536))
-    return scan_ports(ip, all_ports)
-
+    results = []
+    with ThreadPoolExecutor(max_workers=2000) as executor:
+        futures = [executor.submit(scan_target, ip, port) for port in range(1, 65536)]
+        for future in tqdm(as_completed(futures), total=65535, desc="疯狂加载中(o|o) ", colour='green', ncols=100):
+            result = future.result()
+            if result:
+                results.append(result)
+    return results
 
 def main():
     banner = """      
